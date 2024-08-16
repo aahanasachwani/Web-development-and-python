@@ -1,0 +1,6 @@
+print("sample")
+print(4)
+print("hi",5,"skjdhfo")
+print("Ajayanshi is really a cool girl\n\n")
+print("That was good to try",end= "&")
+print("Its done")
