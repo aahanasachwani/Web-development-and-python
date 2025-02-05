@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{color:blue;
+  text-align:left;
+  font-family:Algerian}
+    #demo{height:400px;
+      width:300px;
+background:lightblue}
+label{color:blue;
+font-family:arial}
+
+    </style>
+</head>
+<body>
+    <html>
+    
+    <head>
+       
+        <div id="demo">
+    </head>
+    <h1>Shopping List</h1>
+    <form id=mylist>
+        <label>Enter Item</label><br>
+        <input type=text id=inputitem>
+        <button>ADD</button>
+        </from>
+        <ul id=myitem>
+        </ul>
+        </div>
+    <script>
+        myform = document.getElementById("mylist")
+            myinput = document.getElementById("inputitem")
+            myitem = document.getElementById("myitem")
+            myform.addEventListener("submit", function (evt) {
+                evt.preventDefault();
+                createitem(myinput.value)
+            })
+            function createitem(inputitem) {
+                var items = `<li>${inputitem}
+  <button onclick="deleteelement(this)">Delete</button></li>`
+                myitem.insertAdjacentHTML("beforeend", items)
+                myinput.focus()
+                myinput.value = ""
+            }
+            function deleteelement(deleteelement) {
+                deleteelement.parentElement.remove()
+            }
+    </script>
+    </html>
+
+</body>
+</html>
